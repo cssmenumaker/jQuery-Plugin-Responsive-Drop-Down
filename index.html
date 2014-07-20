@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Menu</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+		body {
+			background: #eee;
+		}
+
+		#cssmenu {
+			width: 80%;
+			position: relative;
+			top: 80px;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	
+<div id="cssmenu" class=''>
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li class="has-sub">
+			<a href="#">Products</a>
+			<ul>
+				<li><a href="#">Product 1</a></li>
+				<li class="has-sub">
+					<a href="#">Galleries</a>
+					<ul>
+						<li><a href="#">Sublink</a></li>
+						<li><a href="#">Sublink</a></li>
+						<li><a href="#">Sublink</a></li>
+						<li><a href="#">Sublink</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Magento</a></li>
+				<li><a href="#">OpenCart</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Company</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+</div>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/cssmenumaker.js"></script>
+<script type="text/javascript">
+	$("#cssmenu").menumaker({
+		title: "My Menu",
+		format: "multitoggle"
+	});
+</script>
+
+</body>
+</html>

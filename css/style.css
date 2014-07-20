@@ -1,0 +1,147 @@
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu #menu-button {
+  display: none;
+}
+#cssmenu {
+  font-family: Helvetica, sans-serif;
+  background: #333;
+}
+#cssmenu > ul > li {
+  float: left;
+}
+#cssmenu > ul > li > a {
+  padding: 15px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #ddd;
+}
+#cssmenu ul li:hover > a {
+  color: #ffffff;
+}
+#cssmenu ul ul {
+  position: absolute;
+  left: -9999px;
+}
+#cssmenu li:hover > ul {
+  left: auto;
+}
+#cssmenu ul ul ul {
+  margin-left: 100%;
+  top: 0;
+}
+#cssmenu ul ul li a {
+  padding: 9px 15px;
+  width: 140px;
+  font-size: 12px;
+  background: #333;
+  text-decoration: none;
+  color: #ddd;
+}
+@media all and (max-width: 768px), 
+      only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), 
+      only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), 
+      only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), 
+      only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), 
+      only screen and (min-resolution: 192dpi) and (max-width: 1024px), 
+      only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  #cssmenu {
+    width: 100%;
+  }
+  #cssmenu ul {
+    width: 100%;
+    display: none;
+  }
+  #cssmenu ul li {
+    width: 100%;
+    border-top: 1px solid #444;
+  }
+  #cssmenu ul li a {
+    width: 100%;
+  }
+  #cssmenu > ul > li {
+    float: none;
+  }
+  #cssmenu ul ul li a {
+    padding-left: 25px;
+  }
+  #cssmenu ul ul ul li a {
+    padding-left: 35px;
+  }
+  #cssmenu ul ul,
+  #cssmenu ul ul ul {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin: 0;
+  }
+  #cssmenu #menu-button {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    background: #333;
+    cursor: pointer;
+  }
+  #cssmenu .submenu-button {
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    top: 0;
+    display: block;
+    border-left: 1px solid #444;
+    height: 44px;
+    width: 44px;
+    cursor: pointer;
+  }
+  #cssmenu ul ul .submenu-button {
+    height: 30px;
+    width: 30px;
+  }
+  #cssmenu .submenu-button:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 17px;
+    display: block;
+    width: 0;
+    padding: 0;
+    border: 5px solid transparent;
+    border-top-color: #fff;
+  }
+  #cssmenu ul ul .submenu-button:after {
+    border-width: 4px;
+    left: 11px;
+    top: 14px;
+  }
+  #cssmenu .submenu-button.submenu-opened:after {
+    top: 15px;
+    border-top-color: transparent;
+    border-bottom-color: #fff;
+  }
+  #cssmenu ul ul .submenu-button.submenu-opened:after {
+    top: 10px;
+  }
+}
