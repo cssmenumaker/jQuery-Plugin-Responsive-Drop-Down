@@ -13,12 +13,14 @@
         $(this).find("#menu-button").on('click', function(){
           $(this).toggleClass('menu-opened');
           var mainmenu = $(this).next('ul');
-          mainmenu.toggleClass('open'); 
           if (mainmenu.hasClass('open')) { 
-            mainmenu.show();
+            mainmenu.hide().removeClass('open');
           }
           else {
-            mainmenu.hide();
+            mainmenu.show().addClass('open');
+            if (settings.format === "dropdown") {
+              mainmenu.find('ul').show();
+            }
           }
         });
 
@@ -43,6 +45,10 @@
         resizeFix = function() {
           if ($( window ).width() > 768) {
             cssmenu.find('ul').show();
+          }
+
+          if ($(window).width() <= 768) {
+            cssmenu.find('ul').hide().removeClass('open');
           }
         };
         resizeFix();
