@@ -22,7 +22,7 @@ Of course, you can create submenus by nesting lists. Next, include the CSS file:
 <link rel="stylesheet" type="text/css" href="css/responsivemenu.css">
 ```
 Link the jQuery script:
-```
+```html
 <script type="text/javascript" src="js/cssmenumaker.js"></script>
 ```
 And finally, initialize the plugin:
