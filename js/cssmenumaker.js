@@ -24,6 +24,8 @@
           }
         });
 
+        cssmenu.find('li ul').parent().addClass('has-sub');
+
         multiTg = function() {
           cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
           cssmenu.find('.submenu-button').on('click', function() {
@@ -40,7 +42,7 @@
         if (settings.format === 'multitoggle') multiTg();
         else cssmenu.addClass('dropdown');
 
-        if (settings.sticky === true) cssmenu.addClass('sticky');
+        if (settings.sticky === true) cssmenu.css('position', 'fixed');
 
         resizeFix = function() {
           if ($( window ).width() > 768) {
