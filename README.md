@@ -1,6 +1,6 @@
 #Responsive Dropdown Menu Plugin
 
-A small jQuery plugin which allows you to create toggle and multi-toggle menus for mobile devices.
+A small jQuery plugin which allows you to create various types of menus for mobile devices. You can create a menu which can be toggled with a tap on mobile devices, a menu where the menu and the submenus can be toggled or a select list menu.
 
 ##Usage
 
@@ -35,6 +35,6 @@ And finally, initialize the plugin:
 ```javascript
 $("#cssmenu").menumaker({
 	title: "Menu",              // The text of the button which toggles the menu
-	format: "multitoggle"       // It takes two values: dropdown for a simple toggle menu and multitoggle for a menu where each submenu can be toggle separately
+	format: "multitoggle"       // It takes three values: dropdown for a simple toggle menu, select for select list menu, multitoggle for a menu where each submenu can be toggled separately
 });
 ```
