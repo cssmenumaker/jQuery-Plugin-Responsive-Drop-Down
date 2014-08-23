@@ -5,6 +5,7 @@
       var cssmenu = $(this), settings = $.extend({
         title: "Menu",
         format: "dropdown",
+        breakpoint: 768,
         sticky: false
       }, options);
 
@@ -62,15 +63,17 @@
         if (settings.sticky === true) cssmenu.css('position', 'fixed');
 
         resizeFix = function() {
-          if ($( window ).width() > 768) {
+          if ($( window ).width() > settings.breakpoint) {
             cssmenu.find('ul').show();
+            cssmenu.removeClass('small-screen');
             if (settings.format === 'select') {
               cssmenu.find('select').hide();
             }
           }
 
-          if ($(window).width() <= 768) {
+          if ($(window).width() <= settings.breakpoint) {
             cssmenu.find('ul').hide().removeClass('open');
+            cssmenu.addClass('small-screen');
             if (settings.format === 'select') {
               cssmenu.find('select').show();
             }
