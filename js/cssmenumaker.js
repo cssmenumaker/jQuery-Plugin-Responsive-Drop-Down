@@ -46,14 +46,19 @@
 
         else if (settings.format === 'select')
         {
-          cssmenu.append('<select style="width: 100%"/>');
+          cssmenu.append('<select style="width: 100%"/>').addClass('select-list');
           var selectList = cssmenu.find('select');
           selectList.append('<option>' + settings.title + '</option>', {
                                                          "selected": "selected",
                                                          "value": ""});
           cssmenu.find('a').each(function() {
-            var element = $(this);
-            selectList.append('<option value="' + $(this).attr('href') + '">' + element.text() + '</option');
+            console.log($(this).parents('ul').length);
+            var element = $(this), indentation = "";
+            for (i = 1; i < element.parents('ul').length; i++)
+            {
+              indentation += '-';
+            }
+            selectList.append('<option value="' + $(this).attr('href') + '">' + indentation + element.text() + '</option');
           });
           selectList.on('change', function() {
             window.location = $(this).find("option:selected").val();

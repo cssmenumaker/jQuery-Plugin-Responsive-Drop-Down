@@ -339,3 +339,6 @@
 #cssmenu.small-screen .submenu-button.submenu-opened:before {
   display: none;
 }
+#cssmenu.small-screen.select-list {
+  padding: 5px;
+}

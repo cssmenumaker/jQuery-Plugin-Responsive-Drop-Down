@@ -1,6 +1,6 @@
 #Responsive Dropdown Menu Plugin
 
-A small jQuery plugin which allows you to create various types of menus for mobile devices. You can create a menu which can be toggled with a tap on mobile devices, a menu where the menu and the submenus can be toggled or a select list menu.
+A small jQuery plugin which allows you to create various types of menus for mobile devices. You can create a menu which can be toggled with a tap on mobile devices, a mmenu where each submenu can be toggled or a select list menu.
 
 ##Usage
 
