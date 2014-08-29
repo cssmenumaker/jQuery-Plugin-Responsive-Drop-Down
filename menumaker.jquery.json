@@ -2,12 +2,17 @@
 	"name": "menumaker",
 	"version": "v0.8.1",
 	"title": "MenuMaker - Responsive Navigation Plugin",
-	"author": "Tiberiu Alexandru Butnaru",
+	"author": {
+		"name": "Tiberiu Alexandru Butnaru"
+	},
 	"licenses": [
 		{
 			"type": "MIT",
 			"url": "http://opensource.org/licenses/MIT"
 		}
 	],
-	"demo": "http://cssmenumaker.com/menu/responsive-flat-menu"
+	"demo": "http://cssmenumaker.com/menu/responsive-flat-menu",
+	"dependencies": {
+        "jquery": ">=1.7"
+    }
 }
