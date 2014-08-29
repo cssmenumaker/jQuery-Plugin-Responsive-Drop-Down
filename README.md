@@ -19,11 +19,11 @@ The plugin is very easy to use. First, create the markup (an unordered list of l
 
 Of course, you can create submenus by nesting lists. Next, include the CSS file:
 ```html
-<link rel="stylesheet" type="text/css" href="css/responsivemenu.css">
+<link rel="stylesheet" type="text/css" href="css/menumaker.css">
 ```
 Link the jQuery script:
 ```html
-<script type="text/javascript" src="js/cssmenumaker.js"></script>
+<script type="text/javascript" src="js/menumaker.js"></script>
 ```
 And finally, initialize the plugin:
 ```html
