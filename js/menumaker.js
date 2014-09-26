@@ -52,7 +52,6 @@
                                                          "selected": "selected",
                                                          "value": ""});
           cssmenu.find('a').each(function() {
-            console.log($(this).parents('ul').length);
             var element = $(this), indentation = "";
             for (i = 1; i < element.parents('ul').length; i++)
             {
@@ -68,15 +67,18 @@
         if (settings.sticky === true) cssmenu.css('position', 'fixed');
 
         resizeFix = function() {
-          if ($( window ).width() > settings.breakpoint) {
+          if ($(window).width() > settings.breakpoint) {
             cssmenu.find('ul').show();
             cssmenu.removeClass('small-screen');
             if (settings.format === 'select') {
               cssmenu.find('select').hide();
             }
+            else {
+              cssmenu.find("#menu-button").removeClass("menu-opened");
+            }
           }
 
-          if ($(window).width() <= settings.breakpoint) {
+          if ($(window).width() <= settings.breakpoint && !cssmenu.hasClass("small-screen")) {
             cssmenu.find('ul').hide().removeClass('open');
             cssmenu.addClass('small-screen');
             if (settings.format === 'select') {
